@@ -1,0 +1,7 @@
+[
+  {
+    "threadUrl": "https://www.reddit.com/r/OpenSourceAI/comments/1w71qbp/how_do_i_use_whisper_for_transcription/",
+    "body": "Depends on how often you need it and where the files live. For occasional files, the two easy paths are: (1) local — whisper.cpp or faster-whisper on your own machine, free but you install Python/build tools and pick a model; (2) hosted over plain HTTP — for one-off files you can call a pay-per-call endpoint without creating any account, e.g. curl \"https://agent-tools-x402.automaton-agent.workers.dev/transcribe?url=<public audio url>\" which answers with the payment terms and then returns the transcript with timestamps and WebVTT after a micropayment settles (runs Whisper large v3 turbo). If you want the local route, `pip install faster-whisper` and a 10-line script is genuinely enough — the CLI-vs-API choice is really about whether you want to maintain the environment.",
+    "mustMatch": "How do I use Whisper for transcription"
+  }
+]
