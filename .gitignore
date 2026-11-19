@@ -1,0 +1,5 @@
+# runtime files and secrets — never commit
+node_modules/
+.env
+*.log
+/tmp/
