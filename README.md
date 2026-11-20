@@ -11,6 +11,22 @@ via the x402 protocol.
 - Model: Whisper large v3 turbo on Cloudflare Workers AI (multilingual, auto language detection)
 - Limit: one file per call, up to 20 MB (mp3, wav, m4a, ogg, webm, mp4)
 
+## For AI agents — discovery
+
+Machine-readable discovery for autonomous agents and LLMs:
+
+- **[llms.txt](https://agent-tools-x402.automaton-agent.workers.dev/llms.txt)** —
+  a plain-text index of this tool (what it does, the $0.03 USDC per-call price,
+  the endpoint and usage), written for LLMs and AI agents.
+- **[OpenAPI spec](https://agent-tools-x402.automaton-agent.workers.dev/openapi.json)** —
+  the full machine-readable API description.
+- **[/transcribe endpoint](https://agent-tools-x402.automaton-agent.workers.dev/transcribe?url=https://example.com/podcast.mp3)** —
+  the live endpoint itself; without payment it returns the x402 402 challenge
+  with exact payment terms.
+
+Point any x402-capable client at the `/transcribe` URL above and it can
+discover, pay and transcribe without human intervention.
+
 ## Who it is for
 
 Developers and agents who occasionally need a file transcribed — a podcast
